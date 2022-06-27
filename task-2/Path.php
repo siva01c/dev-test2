@@ -5,12 +5,12 @@ class Path
 {
     public $currentPath;
 
-    function __construct($path)
+    function __construct(string $path)
     {
         $this->currentPath = $path;
     }
 
-    public function cd($newPath)
+    public function cd(string $newPath)
     {
         $dirStructure = explode('/', $this->currentPath);
         $newDir = explode('../', $newPath);
